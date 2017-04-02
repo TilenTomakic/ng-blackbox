@@ -6,6 +6,10 @@
     "name": "Tilen Tomakić",
     "url" : "http://tomakic.com/"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TilenTomakic/ng-blackbox.git"
+  },
   "main": "lib/index.ts",
   "typings": "lib/index.ts",
   "scripts": {

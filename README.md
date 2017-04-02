@@ -1,6 +1,6 @@
 # Ng-BlackBox
 
-![ng-blackbox logo](./blackbox-app/assets/ng-blackbox-logo.png)
+![ng-blackbox logo](https://github.com/TilenTomakic/ng-blackbox/raw/master/blackbox-app/assets/ng-blackbox-logo.png)
 
 > If airplanes have black boxes why not web apps?
 
@@ -20,7 +20,7 @@ Ng-BlackBox is development dock that provides ability to easily monitor observab
  - [x] you can add custom monitor into dock
  - [ ] generate report
  
-![demo](./blackbox-app/assets/peek.gif) 
+![demo](https://github.com/TilenTomakic/ng-blackbox/raw/master/blackbox-app/assets/peek.gif) 
 
 ## Install
 
