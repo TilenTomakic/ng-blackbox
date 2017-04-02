@@ -1,10 +1,10 @@
 {
   "name": "ng-blackbox",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "license": "MIT",
   "author": {
     "name": "Tilen Tomakić",
-    "url" : "http://tomakic.com/"
+    "url": "http://tomakic.com/"
   },
   "repository": {
     "type": "git",
