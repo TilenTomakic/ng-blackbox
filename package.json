@@ -2,6 +2,10 @@
   "name": "ng-blackbox",
   "version": "0.0.0",
   "license": "MIT",
+  "author": {
+    "name": "Tilen Tomakić",
+    "url" : "http://tomakic.com/"
+  },
   "main": "lib/index.ts",
   "typings": "lib/index.ts",
   "scripts": {
