@@ -1,0 +1,8 @@
+<div *ngIf="visible" class="black-box black-box-position-{{this.positions[this.position]}}">
+  <ul class="navigation">
+    <li *ngFor="let m of monitors" (click)="selectMonitor(m)" [ngClass]="{active: m.selected}" >{{ m.title }}</li>
+  </ul>
+  <div class="content">
+    <ng-content></ng-content>
+  </div>
+</div>

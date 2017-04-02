@@ -1,0 +1,12 @@
+<div class="node">
+  <span (click)="toggleCollapsed($event)" (mouseover)="expand()" class="btn-collapse" *ngIf="children">{{ collapsed ? '⏵' : '⏷'}}</span>
+  <span class="label-key">{{ label }}</span>
+  <span *ngIf="isArray"  class="label-key-array-info">[{{data.length}}]</span>
+  <span *ngIf="children" (click)="printToConsole()" class="btn-print-to-console">⚡</span>
+  <span *ngIf="!children" class="label-val-primitive">
+    <span>: </span><span class="label-val-{{type}}">{{ data }}</span>
+  </span>
+  <div *ngIf="!collapsed && children" class="sub-tree">
+    <app-black-box-tree *ngFor="let x of children" [data]="x.data" [label]="x.label"></app-black-box-tree>
+  </div>
+</div>

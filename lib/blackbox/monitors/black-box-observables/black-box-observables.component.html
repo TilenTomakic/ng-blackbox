@@ -1,0 +1,5 @@
+<ul>
+  <li *ngFor="let x of observables | async" >
+    <app-black-box-tree [data]="x.value" [label]="x.label"></app-black-box-tree>
+  </li>
+</ul>

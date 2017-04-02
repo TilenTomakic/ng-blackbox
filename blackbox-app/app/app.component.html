@@ -1,0 +1,28 @@
+<h1><img style="height: 60px" src="assets/ng-blackbox-logo.png"> ng-blackbox demo</h1>
+<i>If airplanes have black boxes why not web apps?</i>
+<hr>
+
+<h2>Logs monitor</h2>
+<ul>
+  <li>You can click on ⚡ to print object into console.</li>
+</ul>
+
+<h2>Observables monitor</h2>
+<p>
+  Here you will find last values provided by observables.
+</p>
+
+<!-- Add this to your main app component or wherever you wan't for blackbox dock to be available-->
+<app-black-box [visible]="true">
+  <app-black-box-monitor [title]="'Logs'">
+    <app-black-box-logs></app-black-box-logs>
+  </app-black-box-monitor>
+
+  <app-black-box-monitor [title]="'Observables'">
+    <app-black-box-observables></app-black-box-observables>
+  </app-black-box-monitor>
+
+  <app-black-box-monitor [title]="'Monitor example'">
+    Hello world!
+  </app-black-box-monitor>
+</app-black-box>
