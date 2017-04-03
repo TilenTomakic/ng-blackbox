@@ -11,9 +11,23 @@ export class BlackBoxComponent implements OnInit {
 
   monitors: Monitor[] = [];
 
+  @Input() autoHide: boolean;
+  @Input() showHandle: boolean;
   @Input() visible: boolean;
   position: number = 0;
   positions = ['right', 'bottom', 'left', 'top'];
+
+  handlePosition: number = 0;
+  handlePositions = [
+    'top',
+    'top-right',
+    'right',
+    'bottom-right',
+    'bottom',
+    'bottom-left',
+    'left',
+    'top-left',
+  ];
 
   constructor() {}
 
@@ -38,6 +52,10 @@ export class BlackBoxComponent implements OnInit {
           break;
         case 90:
           event.preventDefault();
+          this.handlePosition++;
+          if(this.handlePosition >= this.handlePositions.length) {
+            this.handlePosition = 0;
+          }
           break;
       }
     }

@@ -75,7 +75,7 @@ Add dock into your template
 // TODO
 
 ## Demo
-You can find demo in `lackbox-app` folder. It's using [angular-cli](https://github.com/angular/angular-cli). If you wan't to run it just do `git clone`, `yarn install` or `npm intall` and finally `ng serve` (you must have [angular-cli](https://github.com/angular/angular-cli) installed).
+You can find demo in `blackbox-app` folder. It's using [angular-cli](https://github.com/angular/angular-cli). If you wan't to run it just do `git clone`, `yarn install` or `npm intall` and finally `ng serve` (you must have [angular-cli](https://github.com/angular/angular-cli) installed).
 
 ## Licence
 MIT
