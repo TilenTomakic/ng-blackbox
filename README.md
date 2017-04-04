@@ -8,7 +8,7 @@
 
 Ng-BlackBox is development dock that provides ability to easily monitor observables, logs, basically anything that you wan't in your app. It was inspired by redux-devtools.
 
-This package is under active development so please tread it as alpha version. I'm also looking for way better of creating library since currently you need scss support.
+This package is under active development so please tread it as alpha version. I'm also looking for better way of creating library since currently you need scss support.
 
 > I will write better README when I finish implementing all futures and tests. 
 
