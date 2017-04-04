@@ -1,2 +1,6 @@
 blackbox-app/
 e2e/
+tslint.json
+tsconfig.json
+.angular-cli.json
+.editorconfig
