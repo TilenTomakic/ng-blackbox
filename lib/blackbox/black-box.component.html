@@ -1,8 +1,9 @@
-<div *ngIf="visible" class="black-box black-box-position-{{this.positions[this.position]}}">
-  <ul class="navigation">
+
+<div *ngIf="visible" class="black-box black-box-position-{{positions[position]}}" [ngClass]="{handle: autoHide}">
+  <ul class="black-box-navigation">
     <li *ngFor="let m of monitors" (click)="selectMonitor(m)" [ngClass]="{active: m.selected}" >{{ m.title }}</li>
   </ul>
-  <div class="content">
+  <div class="black-box-content">
     <ng-content></ng-content>
   </div>
 </div>

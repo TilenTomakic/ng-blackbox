@@ -6,7 +6,9 @@
 
 ## Description
 
-Ng-BlackBox is development dock that provides ability to easily monitor observables, logs, basically anything that you wan't in your app.
+Ng-BlackBox is development dock that provides ability to easily monitor observables, logs, basically anything that you wan't in your app. It was inspired by redux-devtools.
+
+This package is under active development so please tread it as alpha version. I'm also looking for way better of creating library since currently you need scss support.
 
 > I will write better README when I finish implementing all futures and tests. 
 
@@ -17,14 +19,21 @@ Ng-BlackBox is development dock that provides ability to easily monitor observab
  - [x] subscribe to observables and see how data is changing
  - [x] see last observable value
  - [x] can be used instead of `console.log`
- - [x] you can add custom monitor into dock
- - [ ] generate report
+ - [x] add custom monitor into dock
  
 ![demo](https://github.com/TilenTomakic/ng-blackbox/raw/master/blackbox-app/assets/peek.gif) 
 
-## Install
+## Installation
 
-// TODO
+Npm
+```
+npm install ng-blackbox
+```
+
+or if you are using yarn
+```
+yarn add ng-blackbox
+```
 
 ## Usage
 
@@ -59,6 +68,8 @@ Add dock into your template
 | Ctrl + H  | SHow/hide dock  |
 | Ctrl + M  | Change dock position  |
 
+For changing default keys read #configuration.
+
 ### Custom monitor
 
 ```html
@@ -73,6 +84,18 @@ Add dock into your template
 
 ### Configuration
 // TODO
+
+Example:
+```html
+<app-black-box 
+  [visible]="true"
+  [visibilityKey]="72"
+  [moveKey]="77"
+  [autoHide]="true">
+  ...
+</app-black-box>
+```
+
 
 ## Demo
 You can find demo in `blackbox-app` folder. It's using [angular-cli](https://github.com/angular/angular-cli). If you wan't to run it just do `git clone`, `yarn install` or `npm intall` and finally `ng serve` (you must have [angular-cli](https://github.com/angular/angular-cli) installed).

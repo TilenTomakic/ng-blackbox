@@ -1,49 +1,91 @@
 $background-color: #151515;
 $text-color: white;
-
+$handle-bar-size: 2px;
+$dock-width: 300px;
+$dock-height: 200px;
 
 .black-box {
   position: fixed;
   background-color: $background-color;
   z-index: 16000000;
-  font-family: Consolas, monaco, monospace;
 
   color: $text-color;
 
   &.black-box-position-left {
-    width: 300px;
     height: 100vh;
+    width: $dock-width;
 
     top: 0;
     left: 0;
+
+    transition: width .5s;
+
+
+    &.handle {
+      width: 0;
+      border-right: solid $handle-bar-size black;
+
+      &:hover {
+        width: $dock-width;
+      }
+    }
   }
 
   &.black-box-position-right {
-    width: 300px;
     height: 100vh;
+    width: $dock-width;
 
     top: 0;
     right: 0;
+
+    transition: width .5s;
+
+    &.handle {
+      width: 0;
+      border-left: solid $handle-bar-size black;
+
+      &:hover {
+        width: $dock-width;
+      }
+    }
   }
 
   &.black-box-position-top {
     width: 100%;
-    height: 200px;
+    height: $dock-height;
 
     top: 0;
     left: 0;
+
+    &.handle {
+      height: 0;
+      border-bottom: solid $handle-bar-size black;
+
+      &:hover {
+        height: $dock-height;
+      }
+    }
   }
 
   &.black-box-position-bottom {
     width: 100%;
-    height: 200px;
+    height: $dock-height;
 
     bottom: 0;
     left: 0;
+
+    &.handle {
+      height: 0;
+      border-top: solid $handle-bar-size black;
+
+      &:hover {
+        height: $dock-height;
+      }
+    }
   }
 
 
-  .navigation {
+  .black-box-navigation {
     list-style: none;
     margin: 0;
     padding: 2px;
@@ -59,6 +101,8 @@ $text-color: white;
       color: black;
       cursor: pointer;
 
+      font-family: Arial, Helvetica, sans-serif;
+
       &.active {
         background-color: white;
       }
@@ -69,7 +113,7 @@ $text-color: white;
     }
   }
 
-  .content {
+  .black-box-content {
     position: absolute;
     left: 0;
     right: 0;
@@ -79,3 +123,64 @@ $text-color: white;
     overflow-y: scroll;
   }
 }
+
+
+$handle-btn-size: 20px;
+
+/*
+black-box-handle black-box-handle-position-{{handlePositions[handlePosition]}}
+
+.black-box-handle {
+
+  transition: all .5s;
+
+  &.black-box-handle-position-top {
+    top: 0;
+    left: 0;
+    height: $handle-bar-size;
+    width: 100%;
+  }
+  &.black-box-handle-position-top-right {
+    top: 0;
+    right: 0;
+    border-bottom-left-radius: 50%;
+
+    height: $handle-btn-size;
+    width: $handle-btn-size;
+  }
+  &.black-box-handle-position-right {
+    right: 0;
+    top: 0;
+
+    height: 100vh;
+    width: $handle-bar-size;
+  }
+  &.black-box-handle-position-bottom-right {
+    right: 0;
+    bottom: 0;
+    border-top-left-radius: 50%;
+  }
+  &.black-box-handle-position-bottom {
+    bottom: 0;
+  }
+  &.black-box-handle-position-bottom-left {
+    bottom: 0;
+    left: 0;
+    border-top-right-radius: 50%;
+  }
+  &.black-box-handle-position-left {
+    left: 0;
+  }
+  &.black-box-handle-position-top-left {
+    left: 0;
+    top: 0;
+    border-bottom-right-radius: 50%;
+  }
+
+  &:hover {
+    width: 50%;
+    height: 100vh;
+    right: 0;
+  }
+}
+*/

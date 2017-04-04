@@ -58,7 +58,7 @@ export class BlackBoxService {
    * Clear old logs.
    */
   public removeOldLogs() {
-
+    // TODO
   }
 
   /**
