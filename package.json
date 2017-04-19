@@ -6,6 +6,8 @@
     "name": "Tilen Tomakić",
     "url": "http://tomakic.com/"
   },
+  "description": "Ng-BlackBox is development dock that provides ability to easily monitor observables, logs, basically anything that you wan't in your app. It was inspired by redux-devtools.",
+  "keywords": [ "devtools", "angular monitor", "debug observables", "angular dock" ],
   "repository": {
     "type": "git",
     "url": "https://github.com/TilenTomakic/ng-blackbox.git"

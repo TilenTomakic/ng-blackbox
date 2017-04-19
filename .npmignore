@@ -4,3 +4,4 @@ tslint.json
 tsconfig.json
 .angular-cli.json
 .editorconfig
+yarn.lock
