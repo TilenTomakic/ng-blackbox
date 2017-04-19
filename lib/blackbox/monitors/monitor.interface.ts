@@ -1,4 +1,4 @@
 export interface Monitor {
-  title: string,
-  selected: boolean
+  title: string;
+  selected: boolean;
 }

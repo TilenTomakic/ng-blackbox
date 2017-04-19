@@ -7,9 +7,9 @@ import { Component, OnInit, Input, OnChanges } from '@angular/core';
 })
 export class BlackBoxTreeComponent implements OnInit, OnChanges {
 
-  @Input() label?    : string = "[click to expand]";
+  @Input() label = '[click to expand]';
   @Input() data      : any;
-  collapsed          : boolean = true;
+  collapsed = true;
   isArray            : boolean;
   children?          : any[];
   type               : string;
@@ -29,22 +29,22 @@ export class BlackBoxTreeComponent implements OnInit, OnChanges {
 
   processData() {
     this.type = typeof this.data;
-    if(this.data === null) {
-      this.type = "null";
+    if (this.data === null) {
+      this.type = 'null';
     }
     switch (this.type) {
-      case "object":
+      case 'object':
         this.children = Object.keys(this.data).map(key => {
           return { label: key, data: this.data[key] };
         });
         this.isArray = this.data instanceof Array;
         break;
-      case "null":
-      case "function":
-      case "undefined":
+      case 'null':
+      case 'function':
+      case 'undefined':
         this.data = this.type;
         break;
-      case "string":
+      case 'string':
         this.data = `"${this.data}"`;
         break;
     }

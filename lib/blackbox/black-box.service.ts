@@ -3,8 +3,8 @@ import { Observable } from 'rxjs/Observable';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 
 export interface Log {
-  label: string,
-  data: any
+  label: string;
+  data: any;
 }
 
 export enum LogType {
@@ -42,15 +42,15 @@ export class BlackBoxService {
   }
 
   private _maxLogAge = -1;
-  get maxLogAge ():number { return this._maxLogAge }
-  set maxLogAgeLogs (val:number) {
+  get maxLogAge (): number { return this._maxLogAge; }
+  set maxLogAgeLogs (val: number) {
     this.removeOldLogs();
   }
 
 
   private _maxLogs = -1;
-  get maxLogs ():number { return this._maxLogs }
-  set maxLogs (val:number) {
+  get maxLogs (): number { return this._maxLogs; }
+  set maxLogs (val: number) {
     this.removeOldLogs();
   }
 

@@ -36,7 +36,7 @@ export class BlackBoxComponent implements OnInit {
    * Current index of position that dock has.
    * @type {number}
    */
-  position: number = 0;
+  position = 0;
 
   /**
    * List of all possible positions. Used in scss.
@@ -47,7 +47,7 @@ export class BlackBoxComponent implements OnInit {
   /**
    * @ignore
    */
-  handlePosition: number = 0;
+  handlePosition = 0;
 
   /**
    * @ignore
@@ -81,8 +81,8 @@ export class BlackBoxComponent implements OnInit {
 
   @HostListener('document:keydown', ['$event'])
   handleKeyboardEvent(event: KeyboardEvent) {
-    if(event.ctrlKey) {
-      switch(event.keyCode) {
+    if (event.ctrlKey) {
+      switch (event.keyCode) {
         case this.visibilityKey:
           event.preventDefault();
           this.visible = !this.visible;
@@ -90,7 +90,7 @@ export class BlackBoxComponent implements OnInit {
         case this.moveKey:
           event.preventDefault();
           this.position++;
-          if(this.position >= this.positions.length) {
+          if (this.position >= this.positions.length) {
             this.position = 0;
           }
           break;

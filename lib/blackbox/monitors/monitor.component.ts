@@ -10,7 +10,7 @@ import { BlackBoxComponent } from '../black-box.component';
 export class BlackBoxMonitorComponent implements OnInit, Monitor {
 
   @Input() title;
-  selected: boolean = false;
+  selected = false;
 
   constructor(private blackBoxComponent: BlackBoxComponent) {
 
